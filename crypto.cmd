@@ -1,2 +1,2 @@
 @echo off
-python "%~dp0tools\crypto_tool.py" %*
+python "%~dp0tools\crypto.py" %*

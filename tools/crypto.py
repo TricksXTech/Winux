@@ -6,6 +6,7 @@ from __future__ import annotations
 import os
 import sys
 import random
+import time
 
 import base58
 import ecdsa
@@ -38,8 +39,9 @@ def verifying_key_to_addr(key):
 
 
 def run_trx_scanner(theme: dict) -> None:
-    """Runs the TRX address and balance scanner loop."""
-    print(f"\n{fmt('[*] Starting TRX Scanner...', theme['ui']['accent'], True)}\n")
+    """Runs a sequential single-threaded TRX address scanner with rate-limit handling."""
+    print(f"\n{fmt('[*] Starting Single-Threaded TRX Scanner...', theme['ui']['accent'], True)}\n")
+    
     z = 0
     w = 0
     
@@ -50,18 +52,31 @@ def run_trx_scanner(theme: dict) -> None:
         priv = raw.hex()
         
         try:
-            block = requests.get(f"https://apilist.tronscan.org/api/account?address={addr}", timeout=10)
-            res = block.json()
+            headers = {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+                "Accept": "application/json"
+            }
+            response = requests.get(
+                f"https://apilist.tronscan.org/api/account?address={addr}", 
+                headers=headers, 
+                timeout=5
+            )
             
-            # Safely parse balances (Tronscan returns empty lists for unused/empty addresses)
-            balances_list = res.get("balances", [])
-            if balances_list:
-                bal = float(balances_list[0].get("amount", 0))
+            if response.status_code == 429:
+                rprint("[yellow]Rate limited (429) by Tronscan API. Pausing for 5 seconds...[/yellow]")
+                time.sleep(5)
+                continue
+                
+            if response.status_code == 200:
+                res = response.json()
+                balances_list = res.get("balances", [])
+                bal = float(balances_list[0].get("amount", 0)) if balances_list else 0.0
             else:
                 bal = 0.0
                 
         except Exception:
-            # Skip API limits or temporary connection issues
+            # Skip connection blips or timeouts
+            time.sleep(1)
             continue
 
         if bal > 0:
@@ -70,12 +85,16 @@ def run_trx_scanner(theme: dict) -> None:
                 f.write(f"\nADDReSS: {addr}   bal: {bal}")
                 f.write(f"\nPRIVATEKEY: {priv}")
                 f.write("\n------------------------")
+            rprint(f"[green]FOUND WINNER! Balance: {bal} TRX saved to FileTRXWinner.txt[/green]")
         else:
             rprint(f'[red1]Total Scan : [/][b blue]{z}[/]')
             rprint(f'[gold1]Address:     [/]{addr}          Balance: {bal}')
             rprint(f'[gold1]Address(hex):[/]{base58.b58decode_check(addr.encode()).hex()}')
             rprint(f'[gold1]Private Key: [/][red1]{raw.hex()}[/]')
             z += 1
+            
+        # Brief pause to keep the public API happy and avoid instant IP blocks
+        time.sleep(0.005)
 
 
 def show_menu(theme: dict) -> None:

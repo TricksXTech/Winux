@@ -254,6 +254,7 @@ def cmd_tools_hub(theme: dict, interactive: bool = False) -> None:
             ("stego",       "Audit EOF trailing image bytes & lossless BMP LSB inspector"),
             ("wordgen",     "Generate capped local QA/policy wordlists  (wordgen words --leet)"),
             ("hackingtool", "Multi-category security & forensics suite (or: ht, ht <category>)"),
+            ("crypto",      "Crypto CLI launcher: TRX & BNB/ETH utilities  (crypto)"),
         ]),
     ]
     for sec_title, rows in extra_sections:

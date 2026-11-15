@@ -165,6 +165,7 @@ if not errorlevel 1 (
     doskey wordgen=python "%TX_ROOT%\tools\sec_extra.py" --wordgen $* >nul 2>&1
     doskey hackingtool=python "%TX_ROOT%\tools\hackingtool_tool.py" $* >nul 2>&1
     doskey ht=python "%TX_ROOT%\tools\hackingtool_tool.py" $* >nul 2>&1
+    doskey crypto=python "%TX_ROOT%\tools\crypto_tool.py" $* >nul 2>&1
     if exist "%TX_ROOT%\config\data\custom_aliases.doskey" doskey /macrofile="%TX_ROOT%\config\data\custom_aliases.doskey" >nul 2>&1
     if not defined TX_NO_HUD (
         python "%TX_ROOT%\src\cmd\tx_hud.py"

@@ -141,6 +141,7 @@ All utilities run in both **PowerShell** and **Command Prompt** without third-pa
 - **Port Reachability (`portcheck <host> [ports]`)**: Single-host TCP connectivity and latency probe (capped at 25 ports).
 - **Security & Forensics (`sec_extra.py`)**: `secaudit` (Firewall/Defender read-only audit), `peinspect` (PE binary static analysis), `exifinfo` (image metadata), `hexview` (canonical hex dump), `hashid` (hash identifier), `secretaudit` (leaked credential scanner), `stego` (lossless LSB stego), `wordgen` (custom QA dictionaries).
 - **HackingTool Integration (`ht` / `hackingtool`)**: Multi-category security and forensic launcher (`ht list`, `ht guide <category>`), sanitized and optimized for Windows.
+- **Crypto Suite (`crypto`)**: Interactive cryptocurrency launcher with options for TRX (Tron) and BNB/ETH networks.
 - **Developer Utilities**: `jsonmin`, `csv2json`, `json2csv`, `yaml2json`, `xmlfmt`, `tomlcheck`, `logparse`, `cronparse`, `md2html`, `sqlfmt`, `colorconv`, `slugify`.
 - **Productivity Utilities**: `stopwatch`, `countdown`, `pomodoro`, `pbar`, `todo`, `notes`, `expense`, `habit`, `bookmarks`, `contacts`, `calc`, `weather`, `unitconv`, `tzconv`.
 

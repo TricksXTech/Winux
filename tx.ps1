@@ -391,7 +391,8 @@ function Show-TxHelp {
         @("exifinfo <file> | stego",       "File magic verification, JPEG EXIF/GPS, PNG & trailer stego audit"),
         @("hashid <hash> | secretaudit",   "Offline hash/token identifier & local secret/misconfig scanner"),
         @("idncheck <domain> | wordgen",   "Homograph phishing Punycode detector & capped local wordlist gen"),
-        @("hackingtool | ht [category]",   "Interactive security & forensic suite (or: ht list, ht info)")
+        @("hackingtool | ht [category]",   "Interactive security & forensic suite (or: ht list, ht info)"),
+        @("crypto [trx|bnb|eth]",          "Cryptocurrency CLI utility launcher (TRX, BNB, ETH)")
     )
 
     Write-Host ""

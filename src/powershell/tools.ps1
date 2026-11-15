@@ -267,6 +267,7 @@ function global:stego       { Invoke-TricksToolPython -ScriptRelPath "tools\sec_
 function global:wordgen     { Invoke-TricksToolPython -ScriptRelPath "tools\sec_extra.py" -ToolArgs (@("--wordgen") + $args) }
 function global:hackingtool { Invoke-TricksToolPython -ScriptRelPath "tools\hackingtool_tool.py" -ToolArgs $args }
 function global:ht          { Invoke-TricksToolPython -ScriptRelPath "tools\hackingtool_tool.py" -ToolArgs $args }
+function global:crypto      { Invoke-TricksToolPython -ScriptRelPath "tools\crypto_tool.py" -ToolArgs $args }
 
 # Load user-defined custom aliases safely (managed by the 'aliases' tool)
 try {

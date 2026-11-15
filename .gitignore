@@ -1,0 +1,37 @@
+# TricksXTech Terminal Environment .gitignore
+
+# Python Cache & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+.Python
+env/
+venv/
+.venv/
+
+# Local User Configurations & State
+config/user.json
+config/cmd_theme.cmd
+config/jump_db.json
+config/data/
+config/vpn_state.json
+config/vpn_settings.json
+*.log
+config/*.log
+
+# VPN Configurations & Keys
+config/ovpn/
+!config/ovpn/README.txt
+
+# Backups & Temporary Files
+backups/
+*.tmp
+*.bak
+*.swp
+
+# Third-Party External Tool Clones & Unpacked Repos
+my-tools/
+my-tools -x/
+tools/new/
+tools/__pycache__/

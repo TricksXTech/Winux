@@ -1,0 +1,33 @@
+{
+  "brand": "TricksXTech",
+  "theme": "tokyo-night",
+  "style": "capsule",
+  "icons": "auto",
+  "hud": "full",
+  "segments": {
+    "admin": true,
+    "userHost": false,
+    "path": true,
+    "git": true,
+    "env": true,
+    "duration": true,
+    "exitCode": true,
+    "clock": true
+  },
+  "wt": {
+    "opacity": 92,
+    "useAcrylic": true,
+    "cursorShape": "bar",
+    "fontFace": "auto",
+    "fontSize": 11,
+    "padding": "10, 12, 10, 12",
+    "retroEffect": "auto"
+  },
+  "productivity": {
+    "lsColors": true,
+    "gitAliases": true,
+    "smartJump": true,
+    "psReadLineTheme": true,
+    "predictionView": "InlineView"
+  }
+}

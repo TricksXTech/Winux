@@ -3,7 +3,7 @@
 > **Bringing the Power, Speed & Elegance of Linux Command Line to Windows.**
 > A unified, hybrid terminal environment & tools suite for **Windows Terminal**, **PowerShell (5.1 & 7+)**, and **Command Prompt (CMD)**.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![License: Custom (T-WOSEL)](https://img.shields.io/badge/License-Custom%20Security%20%26%20Edu-purple.svg)](LICENSE)
 [![Platform: Windows](https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011-0078D6.svg)](https://microsoft.com/windows)
 [![Shells: PowerShell & CMD](https://img.shields.io/badge/Shells-PowerShell%20%7C%20CMD%20%7C%20WT-green.svg)](#)
 [![Python: 3.10+](https://img.shields.io/badge/Python-3.10%2B-yellow.svg)](https://python.org)
@@ -161,7 +161,14 @@ For guidelines on submitting changes, please read [CONTRIBUTING.md](CONTRIBUTING
 
 ---
 
-## 📄 License
+## ⚖️ Legal Disclaimer & License
 
-This project is licensed under the [MIT License](LICENSE) - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **Winux Custom Open Security & Educational License (T-WOSEL)** — see the [LICENSE](LICENSE) file for complete terms.
+
+> [!WARNING]
+> **IMPORTANT SECURITY & LEGAL NOTICE**:
+> Winux provides system diagnostics, network analysis, and security auditing frameworks intended **strictly for lawful system administration, academic research, and authorized educational purposes**.
+>
+> **The user assumes full, sole, and exclusive responsibility for all actions, outcomes, and legal liabilities** resulting from the use or misuse of this software. Under no circumstances shall **TricksXTech**, its creator, maintainers, or contributors be held liable for any damages, unauthorized access, service disruptions, or legal actions resulting from the execution or deployment of this software.
+
 Copyright (c) 2026 TricksXTech.

@@ -360,7 +360,7 @@ def show_hud(force=False):
             line += f" {sep} git:{gc}"
         print()
         print(line)
-        print(fmt("   tx (themes)  |  tools (tools hub)  |  ht (suite)  |  disk (analyzer)  |  ll (files)  |  sysinfo (HUD)", ui["muted"]))
+        print(fmt("   tx (themes)  |  tools (tools hub)  |  crypto (suite)  |  ht (suite)  |  disk (analyzer)  |  ll (files)  |  sysinfo (HUD)", ui["muted"]))
         print()
         return
 
@@ -445,10 +445,10 @@ def show_hud(force=False):
         " "
         + fmt("tx", ui["primary"], bold=True) + fmt(" themes ", ui["muted"])
         + fmt("tools", ui["accent"], bold=True) + fmt(" hub ", ui["muted"])
+        + fmt("crypto", ui["accent"], bold=True) + fmt(" ", ui["muted"])
         + fmt("ht", ui["accent"], bold=True) + fmt(" suite ", ui["muted"])
         + fmt("disk", ui["accent"], bold=True) + fmt(" analyzer ", ui["muted"])
         + fmt("ll", ui["accent"], bold=True) + fmt(" files ", ui["muted"])
-        + fmt("gs", ui["accent"], bold=True) + fmt(" git ", ui["muted"])
         + fmt("sysinfo", ui["accent"], bold=True) + fmt(" HUD", ui["muted"])
     )
     row(tips)

@@ -53,7 +53,7 @@ function Show-TxHud {
         }
         Write-Host ""
         Write-Host $line
-        Write-Host (Format-TxText "   tx (themes)  |  tools (tools hub)  |  ht (suite)  |  disk (analyzer)  |  ll (files)  |  sysinfo (HUD)" -Fg $ui.muted)
+        Write-Host (Format-TxText "   tx (themes)  |  tools (tools hub)  |  crypto (suite)  |  ht (suite)  |  disk (analyzer)  |  ll (files)  |  sysinfo (HUD)" -Fg $ui.muted)
         Write-Host ""
         return
     }
@@ -186,10 +186,10 @@ function Show-TxHud {
     $tips = " " +
         (Format-TxText "tx" -Fg $ui.primary -Bold) + (Format-TxText " themes " -Fg $ui.muted) +
         (Format-TxText "tools" -Fg $ui.accent -Bold) + (Format-TxText " hub " -Fg $ui.muted) +
+        (Format-TxText "crypto" -Fg $ui.accent -Bold) + (Format-TxText " " -Fg $ui.muted) +
         (Format-TxText "ht" -Fg $ui.accent -Bold) + (Format-TxText " suite " -Fg $ui.muted) +
         (Format-TxText "disk" -Fg $ui.accent -Bold) + (Format-TxText " analyzer " -Fg $ui.muted) +
         (Format-TxText "ll" -Fg $ui.accent -Bold) + (Format-TxText " files " -Fg $ui.muted) +
-        (Format-TxText "z" -Fg $ui.accent -Bold) + (Format-TxText " jump " -Fg $ui.muted) +
         (Format-TxText "sysinfo" -Fg $ui.accent -Bold) + (Format-TxText " HUD" -Fg $ui.muted)
     Write-HudRow $tips
     Write-Host $botBar
